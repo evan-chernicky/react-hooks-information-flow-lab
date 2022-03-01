@@ -4,6 +4,7 @@ import itemData from "../data/items";
 import Header from "./Header"
 
 function App() {
+
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   function handleDarkModeClick() {
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className={"App " + (isDarkMode ? "dark" : "light")}>
-      <Header  handleDarkMode={handleDarkModeClick} isDarkMode={isDarkMode} />
+      <Header  onDarkModeClick={handleDarkModeClick} isDarkMode={isDarkMode} />
       <ShoppingList items={itemData} />
     </div>
   );
